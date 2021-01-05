@@ -56,7 +56,7 @@ namespace ALLMVC
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseCustomWare();
+            //app.UseCustomWare();
 
             app.UseRouting();
 

@@ -19,10 +19,12 @@ namespace ALLMVC.MiddleWare
 
         public async Task Invoke(HttpContext httpContext)
         {
-            if (httpContext.Request.Path.Equals("/Home/Idiot"))
-            {
-                httpContext.Response.Redirect("https://www.tollplus.com");
-            }
+            //if (httpContext.Request.Path.Equals("/Home/Idiot"))
+            //{
+            //    httpContext.Response.Redirect("https://www.tollplus.com");
+            //}
+
+            httpContext.Response.Redirect("https://www.tollplus.com");
             await _next(httpContext);
             
         }

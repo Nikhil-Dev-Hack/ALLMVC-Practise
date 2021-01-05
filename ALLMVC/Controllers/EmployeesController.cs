@@ -20,8 +20,14 @@ namespace ALLMVC.Controllers
         }
 
         // GET: Employees
+
+        public IActionResult ViewT()
+        {
+            return View();
+        }
         public async Task<IActionResult> Index()
         {
+            //throw new Exception("Error");
             return View(await _context.Employee.ToListAsync());
         }
 
@@ -46,7 +52,7 @@ namespace ALLMVC.Controllers
         // GET: Employees/Create
         public IActionResult Create()
         {
-            return View();
+            return ViewT();
         }
 
         // POST: Employees/Create
